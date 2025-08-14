@@ -52,7 +52,7 @@ def create_so100():
     # E17 = ET.tx(0.09538)
     # to gripper
     
-    so100 = E4 * E5 * E6 * E7 * E8 * E9 * E10 * E11 * E12 * E13 * E14 * E15 #* E17  # E1 * E2 * E3 * 
+    so100 = E4 * E5 * E6 * E7 * E8 * E9 * E10 * E11 * E12 * E13 * E14 * E15 # E1 * E2 * E3 * E17 
     
     # Set joint limits
     so100.qlim = [[-3.14158, -0.2,     -1.5, -3.14158], 
@@ -60,10 +60,49 @@ def create_so100():
     
     return so100
 
+def create_so101():
+    # to joint 1
+    # E1 = ET.tx(0.0612)
+    # E2 = ET.tz(0.0598)
+    # E3 = ET.Rz()
+    
+    # to joint 2
+    E4 = ET.tx(0.02943)
+    E5 = ET.tz(0.05504)
+    E6 = ET.Ry()
+    
+    # to joint 3
+    E7 = ET.tz(0.1127)
+    E8 = ET.tx(0.02798)
+    E9 = ET.Ry()
+
+    # to joint 4
+    E10 = ET.tx(0.13504)
+    E11 = ET.tz(0.00519)
+    E12 = ET.Ry()
+    
+    # to joint 5
+    E13 = ET.tx(0.0593)
+    E14 = ET.tz(0.00996)
+    E15 = ET.Rx()  
+    
+    # E17 = ET.tx(0.09538)
+    # to gripper
+    
+    so100 = E4 * E5 * E6 * E7 * E8 * E9 * E10 * E11 * E12 * E13 * E14 * E15 # E1 * E2 * E3 * E17 
+    
+    # Set joint limits
+    so100.qlim = [[-1.57, -1.57, -1.5, -3.14158], 
+                  [ 1.57,  1.57,  1.5,  3.14158]]
+    
+    return so100
+
 def get_robot(robot="so100"):
     
     if robot == "so100":
         return create_so100()
+    elif robot == "so101":
+        return create_so101()
     else:
         print(f"Sorry, we don't support {robot} robot now")
         return None
