@@ -17,13 +17,18 @@ This project is developed with great respect and reference to the following open
 
 We sincerely appreciate the contributions of these projects to the robotics community.
 
+## What's New
+
+- **August 14, 2025**: Added kinematic tools for new calibration of so101 robot
+- **April 19, 2025**: Added Chinese readme
+
 ## A. Installation
 
 We recommend using conda for **python=3.10** installations to be consistent with [lerobot](https://github.com/huggingface/lerobot).
 
 ```bash
   # if no lerobot conda env
-  conda create -y -n lerobot python=3.10
+  # conda create -y -n lerobot python=3.10
   conda activate lerobot
 
   git clone https://github.com/box2ai-robotics/lerobot-kinematics.git
@@ -64,6 +69,9 @@ Example of Gripper Posture (gpos) control, where you can use the keyboard to con
 
 ```shell
 python examples/lerobot_keycon_gpos.py
+
+# or for SO101 new calibration
+python examples/lerobot_keycon_gpos_101.py
 ```
 
 | Key | Action +            | Key | Action -            |

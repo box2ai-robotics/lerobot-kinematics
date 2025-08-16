@@ -18,6 +18,7 @@
 
 ## 最新动态
 
+- **2025年8月14日**: 增加了用于 so101 新校准方式的运动学工具
 - **2025年4月19日**: 新增中文文档
 
 ## A. 安装指南
@@ -26,8 +27,8 @@
 
 ```bash
   # 若未创建lerobot虚拟环境
-  conda create -y -n lerobot1 python=3.10
-  conda activate lerobot1
+  # conda create -y -n lerobot python=3.10
+  conda activate lerobot
 
   git clone https://github.com/box2ai-robotics/lerobot-kinematics.git
   cd lerobot-kinematics
